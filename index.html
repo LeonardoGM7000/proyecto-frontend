@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Clima</title>
+
+        <link rel="stylesheet" href="styles.css" />
+
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src = "bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+        <!-- Custom styles for this template -->
+        <link href="carousel.css" rel="stylesheet">
+
+        <!-- Masonry -->
+        <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script></body>
+
+    </head>
+    <body>    
+
+
+        <!-- Barra superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Tenth navbar example">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-cloud-haze2-fill" viewBox="0 0 16 16">
+                    <path d="M8.5 2a5.001 5.001 0 0 1 4.905 4.027A3 3 0 0 1 13 12H3.5A3.5 3.5 0 0 1 .035 9H5.5a.5.5 0 0 0 0-1H.035a3.5 3.5 0 0 1 3.871-2.977A5.001 5.001 0 0 1 8.5 2m-6 8a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zM0 13.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Clima</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <main>
+
+            <!-- Carrusel -->
+
+            <div id="CarruselDeInicio" class="carousel slide mb-6" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="nubes.png" class="img-fluid" alt="...">
+                  <div class="container">
+                    <div class="carousel-caption text-start">
+                      <h1>Example headline.</h1>
+                      <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                      <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <h1>Another example headline.</h1>
+                      <p>Some representative placeholder content for the second slide of the carousel.</p>
+                      <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                  <div class="container">
+                    <div class="carousel-caption text-end">
+                      <h1>One more for good measure.</h1>
+                      <p>Some representative placeholder content for the third slide of this carousel.</p>
+                      <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#CarruselDeInicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#CarruselDeInicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="container-fluid px-5">
+              
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt maiores ullam necessitatibus distinctio eos, quos et consequuntur iusto libero veritatis hic adipisci molestiae optio nostrum porro eligendi, repellat sit pariatur odit nulla nesciunt beatae, est excepturi ea? Incidunt, ullam ad? Libero possimus facilis, dignissimos expedita, unde quas, laboriosam suscipit quam vel quisquam qui iure velit error minima? Fugiat debitis excepturi architecto reiciendis consequuntur iure, voluptatum, nisi autem eligendi totam consequatur unde beatae libero ducimus sed necessitatibus sint modi quis eius, mollitia ipsa? Reiciendis nesciunt omnis ipsam illum magnam, similique in! Fuga facere cum nihil harum asperiores consectetur debitis ut reiciendis!</p>
+
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam odit, cupiditate voluptas autem doloremque quas accusantium saepe, ipsa laudantium quod eius tempora commodi corrupti recusandae, rerum modi ratione quam cum odio tempore expedita! Eveniet culpa vel, quidem placeat voluptatum laudantium doloremque nisi fuga nesciunt deleniti aut ab minus at asperiores. Accusamus minus impedit beatae, cumque totam voluptatum sequi repellat possimus porro quibusdam, iure fugit inventore adipisci quisquam delectus odit enim id voluptate veniam et sunt molestiae? Dignissimos, officia laborum ipsam officiis nobis, iusto praesentium nulla ipsum tempore nam perferendis corrupti ut fuga ratione quae illo. Unde incidunt dignissimos aspernatur ea?</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta perferendis ad ullam aliquid odit omnis hic magnam quibusdam id ratione quas repellendus magni, illum ipsa commodi obcaecati a, ex similique quod quisquam quo vitae ipsum. Autem modi a facilis repellendus aperiam dolores eius velit nobis, expedita non mollitia labore omnis odit cum. Amet vitae culpa rerum aperiam distinctio, eius consequuntur suscipit blanditiis odit, officiis enim, dolore pariatur sint repellat possimus voluptatum similique ipsa molestiae laboriosam obcaecati corrupti minus vero doloribus a? Voluptate dolores voluptatum quas officiis aliquam? Ipsam exercitationem placeat illo enim error assumenda sint minima cumque fuga suscipit.</p>
+              
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, dolor quisquam. Distinctio, dolorem praesentium laboriosam fuga, voluptates consectetur fugit error deleniti facere adipisci officiis! Dignissimos modi, temporibus, nesciunt nemo cupiditate tenetur suscipit quam voluptate officiis reiciendis beatae! Totam perferendis illum est amet asperiores nesciunt magni laboriosam animi, nostrum nam. Minima officia nam sit quae obcaecati repellat quas similique, consequuntur neque nemo ratione ab accusamus odit fuga quos reprehenderit, sint maxime illum eum. Consequatur nemo aspernatur ut facere maxime nobis! Nemo voluptatibus facere laborum officia repellat neque eos, ducimus sit veniam quaerat sed illum dolorum nobis tempora, quas assumenda sapiente vero!</p>
+
+              <div class="row" data-masonry='{"percentPosition": true }'>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title that wraps to a new line</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card p-3">
+                    <figure class="p-3 mb-0">
+                      <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card text-bg-primary text-center p-3">
+                    <figure class="mb-0">
+                      <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer mb-0 text-white">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card text-center">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card">
+                    <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card p-3 text-end">
+                    <figure class="mb-0">
+                      <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+        </main>
+    </body>
+</html>
