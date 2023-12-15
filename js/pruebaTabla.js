@@ -73,7 +73,15 @@ $(document).ready(() => {
     },
     pagingType: "full_numbers",
     "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],
-    initComplete: function () {
+    /*responsive: true,
+    columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+    ]*/
+    responsive: {
+      details: false
+    }
+    /*initComplete: function () {
       this.api()
           .columns()
           .every(function () {
@@ -104,6 +112,6 @@ $(document).ready(() => {
 
                   });
           });
-      },
+      },*/
   });
 });
