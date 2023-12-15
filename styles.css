@@ -13,4 +13,8 @@
   .dropdown-toggle:not(:focus) {
     outline: 0;
   }
+
+  main > .container {
+    padding: 90px 15px 0;
+  }
   
