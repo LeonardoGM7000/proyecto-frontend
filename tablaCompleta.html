@@ -21,6 +21,8 @@
     <script src="libs/jquery.dataTables.min.js" ></script>
     <script src="libs/popper.min.js"></script>
     <script src="libs/dataTables.bootstrap5.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script src="libs/iconify-icon.min.js"></script>
     
     <script src="js/jsonClima.js"></script>
     <script src="js/pruebaTabla.js"></script>
@@ -69,20 +71,6 @@
   <main>
     <div class="container py-4">
       <h1>Clima en la República Mexicana</h1>
-
-      <!--
-      <div class="container-fluid">
-        <label for="diaSel">Día:</label>
-        <select id="diaSel" class="form-select" aria-label="Default select example">
-          <option value="0" selected>Seleccione un día</option>
-          <option value="1">09/11/2023</option>
-          <option value="2">10/11/2023</option>
-          <option value="3">11/11/2023</option>
-          <option value="4">12/11/2023</option>
-        </select>
-      </div>
-      -->
-
       <div class="container-fluid py-3 table-responsive">
         <table id="tablaClima" class="table table-striped" style="width:100%;">
           <thead class="table-sm">
@@ -133,7 +121,83 @@
             </select>
           </div>
         </div>
+      </div>
 
+      <div id="info" class="container py-2 visually-hidden">
+        <div class="container-fluid table-responsive">
+          <table class="table table-striped" style="width: 100%;">
+            <thead class="table-sm">
+              <tr>
+                <th style="width: 15%;">Estado</th> 
+                <th style="width: 20%;">Municipio</th>
+                <th style="width: 10%;">Día</th>
+                <th style="width: 10%;">Temperatura máx. (°C)</th>
+                <th style="width: 10%;">Temperatura mín. (°C)</th>
+                <th style="width: 10%;">Cielo</th>
+                <th style="width: 15%;">Probabilidad de precipitación (%)</th>
+              </tr>
+            </thead>
+            <tbody id="filasInfo"></tbody>
+          </table>
+        </div>
+
+        <div class="container-fluid py-3">
+          
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-sm-0">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <span class="iconify" data-icon="twemoji:flag-mexico" data-width="200" data-height="200"></span>
+                  <div id="estadosCard"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center h-100">
+                <div id="desCielCard" class="card-body">
+                  <span class="iconify" data-icon="meteocons:overcast-day-rain-fill" data-width="200" data-height="200"></span>
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>                
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center h-100">            
+                <div class="card-body">
+                  <span class="iconify" data-icon="meteocons:raindrop-measure" data-width="200" data-height="200"></span>
+                  <div id="precipCard"></div>
+                </div>                
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-3">
+            <div class="col-md-4 mb-3 mb-sm-0">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <span class="iconify" data-icon="meteocons:wind-fill" data-width="200" data-height="200"></span>
+                  <div id="vientoCard"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <span class="iconify" data-icon="meteocons:thermometer-warmer" data-width="200" data-height="200"></span>
+                  <div id="tempMaxCard"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <span class="iconify" data-icon="meteocons:thermometer-colder" data-width="200" data-height="200"></span>
+                  <div id="tempMinCard"></div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
   
     </div>
