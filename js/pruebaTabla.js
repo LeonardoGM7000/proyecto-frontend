@@ -3,6 +3,13 @@ let arrClimas = Array.from(datosClima);   //arrClimas guarda el JSON de clima pa
 let filasClima = "";                      //filasClima guarda el código HTML de las filas de la tabla de clima
 let estados = new Array();                //estados guarda los nombres de los estados
 let dias = new Array();                   //dias guarda los días
+var miGrafica;
+var graficaPastel;
+var miArreglo = new Array(4);
+let dia1 = new Array(5).fill(0);
+let dia2 = new Array(5).fill(0);
+let dia3 = new Array(5).fill(0);
+let dia4 = new Array(5).fill(0);
 
 //Se recorre el array de clima para generar las filas de la tabla de clima, además de guardar los nombres de los estados y los días
 arrClimas.forEach((obj) =>{
@@ -26,6 +33,61 @@ arrClimas.forEach((obj) =>{
   }
   if(!dias.includes(dia)){
     dias.push(dia);
+  }
+});
+
+arrClimas.forEach((obj) =>{
+  let dloc = new String(obj.dloc);
+  let diaObj = "".concat(dloc.valueOf().slice(6,8),"/",dloc.valueOf().slice(4,6),"/",dloc.valueOf().slice(0,4));
+
+  if(diaObj == dias[0]){
+    if(obj.desciel == "Despejado"){
+      dia1[0]++;
+    } else if(obj.desciel == "Medio nublado"){
+      dia1[1]++;
+    } else if(obj.desciel == "Poco nuboso"){
+      dia1[2]++;
+    } else if(obj.desciel == "Cielo nublado"){
+      dia1[3]++;
+    } else if(obj.desciel == "Cielo cubierto"){
+      dia1[4]++;
+    }
+  } else if(diaObj == dias[1]){
+    if(obj.desciel == "Despejado"){
+      dia2[0]++;
+    } else if(obj.desciel == "Medio nublado"){  
+      dia2[1]++;
+    } else if(obj.desciel == "Poco nuboso"){
+      dia2[2]++;
+    } else if(obj.desciel == "Cielo nublado"){
+      dia2[3]++;
+    } else if(obj.desciel == "Cielo cubierto"){
+      dia2[4]++;
+    }
+  } else if(diaObj == dias[2]){
+    if(obj.desciel == "Despejado"){
+      dia3[0]++;
+    } else if(obj.desciel == "Medio nublado"){
+      dia3[1]++;
+    } else if(obj.desciel == "Poco nuboso"){
+      dia3[2]++;
+    } else if(obj.desciel == "Cielo nublado"){
+      dia3[3]++;
+    } else if(obj.desciel == "Cielo cubierto"){
+      dia3[4]++;
+    }
+  } else if(diaObj == dias[3]){
+    if(obj.desciel == "Despejado"){
+      dia4[0]++;
+    } else if(obj.desciel == "Medio nublado"){
+      dia4[1]++;
+    } else if(obj.desciel == "Poco nuboso"){
+      dia4[2]++;
+    } else if(obj.desciel == "Cielo nublado"){
+      dia4[3]++;
+    } else if(obj.desciel == "Cielo cubierto"){
+      dia4[4]++;
+    }
   }
 });
 
@@ -55,6 +117,7 @@ $(document).ready(() => {
   let municipio = "";
   let estado = "";
   let dia = "";
+  
   $("#filasClima").html(filasClima);      //Se agrega el código HTML de las filas de la tabla de clima
   
   //Se inicializa la tabla de clima con DataTables
@@ -84,8 +147,8 @@ $(document).ready(() => {
   //Se ejecuta cuando se cambia el valor del select de estados, mostrará o desaparecerá los select de municipios y días dependiendo del valor del select de estados
   $("#estadoSel").change(() => {
     $("div#info").addClass("visually-hidden");
-    $("div#municipioSel").addClass("visually-hidden");
-    $("div#diaSel").addClass("visually-hidden");
+    $("#munSelDiv").addClass("visually-hidden");
+    $("#diaSelDiv").addClass("visually-hidden");
     estado = $("#estadoSel").val();
     if(estado != "0"){
       let opcMunicipios = "";
@@ -109,38 +172,49 @@ $(document).ready(() => {
         `;
       });
       $("select#municipioSel").html(opcMunicipios);
-      $("div#municipioSel").removeClass("visually-hidden");
+      $("#munSelDiv").removeClass("visually-hidden");
     } else{
       $("div#info").addClass("visually-hidden");
-      $("div#municipioSel").addClass("visually-hidden");
-      $("div#diaSel").addClass("visually-hidden");
+      $("#munSelDiv").addClass("visually-hidden");
+      $("#diaSelDiv").addClass("visually-hidden");
     }
   });
 
   //Se ejecuta cuando se cambia el valor del select de municipios, mostrará o desaparecerá el select de días dependiendo del valor del select de municipios
   $("select#municipioSel").change(() => {
     $("div#info").addClass("visually-hidden");
-    $("div#diaSel").addClass("visually-hidden");
+    $("#diaSelDiv").addClass("visually-hidden");
     municipio = $("select#municipioSel").val();
     
     if(municipio != "0"){
       $("select#diaSel").html(opcDias);
-      $("div#diaSel").removeClass("visually-hidden");
+      $("#diaSelDiv").removeClass("visually-hidden");
     } else{
       $("div#info").addClass("visually-hidden");
-      $("div#diaSel").addClass("visually-hidden");
+      $("#diaSelDiv").addClass("visually-hidden");
     }
   });
 
   $("select#diaSel").change(() => {
     $("div#info").addClass("visually-hidden");
+    let opcVarGraf = `<option value="1" selected>Temperatura máxima</option>
+    <option value="2">Temperatura mínima</option>
+    <option value="3">Probabilidad de precipitación</option>
+    <option value="4">Velocidad del viento</option>`;
+    $("select#varGraf").html(opcVarGraf);
     dia = $("select#diaSel").val();
 
     if(dia != "0"){
+      let indice = 0;
       arrClimas.forEach((obj) =>{
         let dloc = new String(obj.dloc);
         let nmun = new String(obj.nmun);
         let diaObj = "".concat(dloc.valueOf().slice(6,8),"/",dloc.valueOf().slice(4,6),"/",dloc.valueOf().slice(0,4));
+
+        if(obj.nes==estado && nmun.valueOf()==municipio){
+          miArreglo[indice]=obj;
+          indice++;
+        }
 
         if(nmun.valueOf() == municipio && diaObj == dia){
           $("#filasInfo").html(`
@@ -205,9 +279,194 @@ $(document).ready(() => {
           }
         }
       });
+      $("#varGraf").change(() => {
+        let varSeleccionada = $("#varGraf").val();
+        if(varSeleccionada=="1"){
+          realizarGraficotMax();
+        } else if(varSeleccionada=="2"){
+          realizarGraficotMin();
+        } else if(varSeleccionada=="3"){
+          realizarGraficopP();
+        } else if(varSeleccionada=="4"){
+          realizarGraficovV();
+        }
+      });
+      realizarGraficotMax();
       $("div#info").removeClass("visually-hidden");
     } else{
       $("div#info").addClass("visually-hidden");
     }
   });
+
+  graficasPastel('pastelDia1',dia1, dias[0]);
+  graficasPastel('pastelDia2',dia2, dias[1]);
+  graficasPastel('pastelDia3',dia3, dias[2]);
+  graficasPastel('pastelDia4',dia4, dias[3]);
 });
+
+function graficasPastel(id,datos,titulo){
+  // Obtén el contexto del canvas
+  var ctx = document.getElementById(id);
+
+  // Crea la instancia del gráfico
+  graficaPastel = new Chart(ctx, {
+
+    type: 'pie', // Tipo de gráfico (puede ser 'line', 'bar', 'radar', etc.)
+    data: {
+        labels: ['Despejado','Medio nublado','Poco nuboso','Cielo nublado','Cielo cubierto'],
+        datasets: [{
+          label: 'Municipios',
+          data: datos,
+          backgroundColor: ['rgb(251, 140, 13)','rgb(13, 124, 251)','rgb(51, 70, 91)','rgb(255, 229, 0)','rgb(100, 172, 6)'], // Color de fondo de las barras
+          hoverOffset: 4
+        }]
+    },
+    options: {
+      plugins: {
+          title: {
+              display: true,
+              text: titulo,
+              font: {
+                size: 20
+              }
+          }
+      }
+    }
+  });
+}
+
+function realizarGraficotMax(){
+
+  // Obtén el contexto del canvas
+  var ctx = document.getElementById('miGrafica').getContext('2d');
+
+  if (miGrafica) {
+      miGrafica.destroy();
+  }
+
+  // Crea la instancia del gráfico
+   miGrafica = new Chart(ctx, {
+
+  type: 'line', // Tipo de gráfico (puede ser 'line', 'bar', 'radar', etc.)
+  data: {
+      labels: dias,
+      datasets: [{
+      label: 'Temperatura maxima',
+      data: [miArreglo[0].tmax,miArreglo[1].tmax,miArreglo[2].tmax,miArreglo[3].tmax],
+      backgroundColor: 'rgba(249, 180, 45, 0.2)', // Color de fondo de las barras
+      borderColor: 'rgba(249, 180, 45, 1)', // Color del borde de las barras
+      borderWidth: 1 // Ancho del borde de las barras
+      }]
+  },
+  options: {
+      scales: {
+      y: {
+          beginAtZero: false
+      }
+      }
+  }
+  });
+
+}
+
+function realizarGraficotMin(){
+
+  // Obtén el contexto del canvas
+  var ctx = document.getElementById('miGrafica').getContext('2d');
+
+  if (miGrafica) {
+      miGrafica.destroy();
+  }
+
+  // Crea la instancia del gráfico
+   miGrafica = new Chart(ctx, {
+
+  type: 'line', // Tipo de gráfico (puede ser 'line', 'bar', 'radar', etc.)
+  data: {
+      labels: dias,
+      datasets: [{
+      label: 'Temperatura minima',
+      data: [miArreglo[0].tmin,miArreglo[1].tmin,miArreglo[2].tmin,miArreglo[3].tmin],
+      backgroundColor: 'rgba(249, 180, 45, 0.2)', // Color de fondo de las barras
+      borderColor: 'rgba(249, 180, 45, 1)', // Color del borde de las barras
+      borderWidth: 1 // Ancho del borde de las barras
+      }]
+  },
+  options: {
+      scales: {
+      y: {
+          beginAtZero: false
+      }
+      }
+  }
+  });
+
+}
+
+function realizarGraficovV(){
+
+  // Obtén el contexto del canvas
+  var ctx = document.getElementById('miGrafica').getContext('2d');
+
+  if (miGrafica) {
+      miGrafica.destroy();
+  }
+
+  // Crea la instancia del gráfico
+   miGrafica = new Chart(ctx, {
+
+  type: 'line', // Tipo de gráfico (puede ser 'line', 'bar', 'radar', etc.)
+  data: {
+      labels: dias,
+      datasets: [{
+      label: 'Velocidad del viento',
+      data: [miArreglo[0].velvien,miArreglo[1].velvien,miArreglo[2].velvien,miArreglo[3].velvien],
+      backgroundColor: 'rgba(249, 180, 45, 0.2)', // Color de fondo de las barras
+      borderColor: 'rgba(249, 180, 45, 1)', // Color del borde de las barras
+      borderWidth: 1 // Ancho del borde de las barras
+      }]
+  },
+  options: {
+      scales: {
+      y: {
+          beginAtZero: false
+      }
+      }
+  }
+  });
+
+}
+
+function realizarGraficopP(){
+
+  // Obtén el contexto del canvas
+  var ctx = document.getElementById('miGrafica').getContext('2d');
+
+  if (miGrafica) {
+      miGrafica.destroy();
+  }
+
+  // Crea la instancia del gráfico
+   miGrafica = new Chart(ctx, {
+
+  type: 'line', // Tipo de gráfico (puede ser 'line', 'bar', 'radar', etc.)
+  data: {
+      labels: dias,
+      datasets: [{
+      label: 'Probabilidad de prec.',
+      data: [miArreglo[0].probprec,miArreglo[1].probprec,miArreglo[2].probprec,miArreglo[3].probprec],
+      backgroundColor: 'rgba(249, 180, 45, 0.2)', // Color de fondo de las barras
+      borderColor: 'rgba(249, 180, 45, 1)', // Color del borde de las barras
+      borderWidth: 1 // Ancho del borde de las barras
+      }]
+  },
+  options: {
+      scales: {
+      y: {
+          beginAtZero: false
+      }
+      }
+  }
+  });
+
+}

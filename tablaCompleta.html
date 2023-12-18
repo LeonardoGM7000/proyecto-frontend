@@ -21,8 +21,9 @@
     <script src="libs/jquery.dataTables.min.js" ></script>
     <script src="libs/popper.min.js"></script>
     <script src="libs/dataTables.bootstrap5.min.js"></script>
-    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script src="libs/iconify.min.js"></script>
     <script src="libs/iconify-icon.min.js"></script>
+    <script src="libs/chart.js"></script>
     
     <script src="js/jsonClima.js"></script>
     <script src="js/pruebaTabla.js"></script>
@@ -110,11 +111,11 @@
             <label for="estadoSel">Estado:</label>
             <select id="estadoSel" class="form-select" name="estadoSel"></select>
           </div>
-          <div id="municipioSel" class="col-md visually-hidden">
+          <div id="munSelDiv" class="col-md visually-hidden">
             <label for="municipioSel">Municipio:</label>
             <select id="municipioSel" class="form-select" name="municipioSel"></select>
           </div>
-          <div id="diaSel" class="col-md visually-hidden">
+          <div id="diaSelDiv" class="col-md visually-hidden">
             <label for="diaSel">Día:</label>
             <select id="diaSel" class="form-select" name="diaSel">
               <option value="0" selected>Seleccione un día</option>
@@ -147,7 +148,7 @@
             <div class="col-md-4 mb-3 mb-sm-0">
               <div class="card text-center h-100">
                 <div class="card-body">
-                  <span class="iconify" data-icon="twemoji:flag-mexico" data-width="200" data-height="200"></span>
+                  <span class="iconify" data-icon="twemoji:flag-mexico" data-width="150" data-height="150"></span>
                   <div id="estadosCard"></div>
                 </div>
               </div>
@@ -189,7 +190,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card text-center">
+              <div class="card text-center h-100">
                 <div class="card-body">
                   <span class="iconify" data-icon="meteocons:thermometer-colder" data-width="200" data-height="200"></span>
                   <div id="tempMinCard"></div>
@@ -198,8 +199,71 @@
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="container-fluid py-3">
+          <div class="row">
+            <div class="text-center">
+              <h3>Gráficas de comparación</h3>
+              <p>Seleccione una variable para visualizar el comportamiento del municipio seleccionado en los diferentes días</p>
+            </div>
+            <div class="col-md-4">
+              <label for="varGraf">Variable:</label>
+              <select id="varGraf" class="form-select" name="varGraf">
+                <option value="1" selected>Temperatura máxima</option>
+                <option value="2">Temperatura mínima</option>
+                <option value="3">Probabilidad de precipitación</option>
+                <option value="4">Velocidad del viento</option>
+              </select>
+            </div>
+          </div>
   
+          <div class="container py-3 text-center">
+            <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+              <canvas id="miGrafica"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-2">
+        <div class="text-center">
+          <h2 class="center">Comparando el cielo</h2>
+          <p>Estas gráficas muestran cómo estará el cielo de México hoy y en los próximos días.</p>
+        </div>
+        <!--
+        <div class="container py-3 text-center">
+          <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+            <canvas id="pastelDia1"></canvas>
+          </div>
+        </div>
+        -->
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="chart-container" style="position: relative; height: 50vh; width: 30vw;">
+              <canvas id="pastelDia1"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chart-container" style="position: relative; height: 50vh; width: 30vw;">
+              <canvas id="pastelDia2"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row py-3">
+          <div class="col-md-6">
+            <div class="chart-container" style="position: relative; height: 50vh; width: 30vw;">
+              <canvas id="pastelDia3"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chart-container" style="position: relative; height: 50vh; width: 30vw;">
+              <canvas id="pastelDia4"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
