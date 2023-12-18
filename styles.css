@@ -18,3 +18,10 @@
     padding: 90px 15px 0;
   }
   
+  .card {
+    transition: all 0.3s;
+  }
+
+  .card:hover{
+    transform: scale(1.05);
+  }

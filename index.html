@@ -2,211 +2,471 @@
 <html lang="en">
     <head>
 
-        <title>Clima</title>
+        <title>CLIMA MX</title>
+        <link rel="icon" href="assets/img/logoIcon.ico">
 
         <link rel="stylesheet" href="styles.css" />
 
+
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
-        <link href="bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
-        <link href="bootstrap/css/bootstrap-utilities.min.css" rel="stylesheet">
         <script src = "bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="bootstrap/js/bootstrap.esm.min.js"></script>
-
-
-        <!-- Custom styles for this template -->
-        <link href="carousel.css" rel="stylesheet">
 
         <!-- Masonry -->
         <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script></body>
 
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
     </head>
-    <body>    
-
-
-        <!-- Barra superior -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Tenth navbar example">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <body>   
       
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-cloud-haze2-fill" viewBox="0 0 16 16">
-                    <path d="M8.5 2a5.001 5.001 0 0 1 4.905 4.027A3 3 0 0 1 13 12H3.5A3.5 3.5 0 0 1 .035 9H5.5a.5.5 0 0 0 0-1H.035a3.5 3.5 0 0 1 3.871-2.977A5.001 5.001 0 0 1 8.5 2m-6 8a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zM0 13.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
-                  </svg>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Clima</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
+      
+      <!-- ======= Header ======= -->
+      <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-lg-between">
+
+          <h1 class="logo me-auto me-lg-0"><a href="index.html">CLIMA<span> MX</span></a></h1>
+
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">Acerca de</a></li>
+              <li><a class="nav-link scrollto" href="#meteorologia">Meteorología</a></li>
+              <li><a class="nav-link scrollto " href="#pronostico">Pronóstico</a></li>
+              <li><a class="nav-link scrollto" href="#noticias">Noticias</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+
+          <a href="#about" class="get-started-btn scrollto">Comencemos</a>
+
+
+        </div>
+      </header><!-- End Header -->
+
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container" data-aos="fade-up">
+
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-xl-6 col-lg-8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+                <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8m4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+                <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+              </svg>
+              <h1>CLIMA<span> MX</span></h1>
+              <h2>Información meteorológica confiable, siempre a tu alcance</h2>
             </div>
           </div>
-        </nav>
+
+          <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+
+            <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffc451" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+                  <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8m4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+                  <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+                </svg>
+                <h3><a class="nav-link scrollto" href="">Pronósticos</a></h3>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffc451" class="bi bi-tropical-storm" viewBox="0 0 16 16">
+                  <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                  <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2M8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+                </svg>
+                <h3><a href="https://smn.conagua.gob.mx/es/" target="_blank">SMN</a></h3>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffc451" class="bi bi-droplet" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                  <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z"/>
+                </svg>
+                <h3><a href="https://www.gob.mx/conagua" target="_blank">CONAGUA</a></h3>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffc451" class="bi bi-file-earmark-bar-graph-fill" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m.5 10v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5m-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"/>
+                </svg>
+                <h3><a href="">P</a></h3>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section><!-- End Hero -->
 
         <main>
-
-            <!-- Carrusel -->
-
-            <div id="CarruselDeInicio" class="carousel slide mb-6" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#CarruselDeInicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="nubes.png" class="img-fluid" alt="...">
-                  <div class="container">
-                    <div class="carousel-caption text-start">
-                      <h1>Example headline.</h1>
-                      <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                    </div>
-                  </div>
+          <!-- ======= Acerca de ======= -->
+          <section id="about" class="about">
+            <div class="container" data-aos="fade-left" data-aos-delay="100">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-1 order-lg-2">
+                  <img src="assets/img/nasa.jpg" class="img-fluid" alt="">
                 </div>
-                <div class="carousel-item">
-                  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                  <div class="container">
-                    <div class="carousel-caption">
-                      <h1>Another example headline.</h1>
-                      <p>Some representative placeholder content for the second slide of the carousel.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                  <div class="container">
-                    <div class="carousel-caption text-end">
-                      <h1>One more for good measure.</h1>
-                      <p>Some representative placeholder content for the third slide of this carousel.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                    </div>
-                  </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>Bienvenido a CLIMA MX</h3>
+                  <p>
+                    En CLIMA MX, nos dedicamos a brindarte la información meteorológica más precisa y confiable, diseñada para mantenerte al tanto de las condiciones climáticas en tiempo real. Nuestra pasión por la meteorología se refleja en nuestro compromiso de proporcionar pronósticos detallados y actualizados para que puedas tomar decisiones informadas en tu día a día.
+                  </p>
+                  <ul>
+                    <li><i class="ri-check-double-line"></i> Precision Meteorológica: Utilizamos fuentes confiables para proporcionar predicciones precisas y actualizadas.</li>
+                    <li><i class="ri-check-double-line"></i> Pronóstico Extendido: Ofrecemos pronóstico extendido que te permite anticipar las condiciones climáticas para los próximos 3 días.</li>
+                    <li><i class="ri-check-double-line"></i> Mapas Interactivos: Explorar el clima en tu área con los mapas interactivos.</li>
+                  </ul>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#CarruselDeInicio" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#CarruselDeInicio" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            </div>
+          </section><!-- Fin Acerca de Section -->
+
+          <!-- Misión -->
+          <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+              <div class="text-center">
+                <h3>Nuestra Misión: Conectar con el Clima, Conectar Contigo</h3>
+                <p> En un mundo donde el clima puede influir significativamente en nuestras actividades diarias, creemos que acceder a pronósticos precisos y fácilmente comprensibles es esencial. En CLIMA MX, nos esforzamos por ofrecer una experiencia única, brindándote información meteorológica de manera accesible y confiable.</p>
+              </div>
+            </div>
+          </section><!-- Fin de Misión -->
+
+          <!-- ======= Meteorología ======= -->
+          <section id="meteorologia" class="about">
+            <div class="container" data-aos="fade-right">
+              <div class="section-title">
+                <h2>Meteorología</h2>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-lg-5 order-1 order-lg-1"  data-aos-delay="100">
+                  <img src="assets/img/estacionClima.webp" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-7 pt-4 pt-lg-0 order-2 order-lg-1 content"  data-aos-delay="100">
+                  <h3>Servicio Meteorológico Nacional (SMN)</h3>
+                  <p>Es el organismo encargado de proporcionar información sobre el estado del tiempo a escala nacional y local en nuestro país. El Servicio Meteorológico Nacional, depende de la Comisión Nacional del Agua (CONAGUA), la cual forma parte de la Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT).</p>
+                  <ul>
+                    <p>Los objetivos del SMN se concentran en la vigilancia continua de la atmósfera para identificar los fenómenos meteorológicos que pueden afectar las distintas actividades económicas y sobre todo originar la pérdida de vidas humanas. El SMN también realiza el acopio de la información climatológica nacional.</p>
+                    <li><i class="ri-check-double-line"></i> Mantener informado al Sistema Nacional de Protección Civil, de las condiciones meteorológicas que puedan afectar a la población y a sus actividades económicas.</li>
+                    <li><i class="ri-check-double-line"></i> Difundir al público boletines y avisos de las condiciones del tiempo, especialmente durante la época de ciclones, que abarca de mayo a noviembre.</li>
+                    <li><i class="ri-check-double-line"></i> Proporcionar al público información meteorológica y climatológica.</li>
+                    <li><i class="ri-check-double-line"></i> Realizar estudios climatológicos o meteorológicos.</li>
+                  </ul>
+                </div>
+              </div><!-- ======= Fin de Meteorología ======= -->
+
+              <!-- Twitter de SMN -->
+              <div class="container py-3 px-0" data-aos="fade-left" data-aos-delay="100">
+                <div class="row align-items-center">
+                  <div class="col-lg-4 order-1 order-lg-2" >
+                    <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/conagua_clima?ref_src=twsrc%5Etfw">Tweets by conagua_clima</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                  <div class="col-lg-8 pt-4 pt-lg-0 order-2 order-lg-1 content" >
+                    <h3>CONAGUA</h3>
+                    <p>La Comisión Nacional del Agua (CONAGUA) es un organismo administrativo desconcentrado de la Secretaría de Medio Ambiente y Recursos Naturales, creado en 1989, cuya responsabilidad es administrar, regular, controlar y proteger las aguas nacionales en México. Dentro de su estructura se encuentra el Servicio Meteorológico Nacional.</p>
+                    <p>Su misión es preservar las aguas nacionales y sus bienes públicos inherentes para su administración sustentable y garantizar la seguridad hídrica con la responsabilidad de los órdenes de gobierno y la sociedad en general.</p>
+                    <ul>
+                      <li><i class="ri-check-double-line"></i> Gestión del Recurso Hídrico: CONAGUA se encarga de planificar y administrar el uso sostenible del agua en México.</li>
+                      <li><i class="ri-check-double-line"></i> Monitoreo Meteorológico y Climático: La institución tiene la responsabilidad de recopilar y analizar datos meteorológicos y climáticos en todo el país.</li>
+                      <li><i class="ri-check-double-line"></i> Infraestructura Hidráulica: CONAGUA participa en el diseño, construcción y mantenimiento de infraestructuras hidráulicas, como presas, canales y sistemas de riego.</li>
+                      <li><i class="ri-check-double-line"></i> Protección contra Inundaciones y Desastres Naturales: La comisión desarrolla estrategias y proyectos para reducir el riesgo de inundaciones y mitigar los impactos de desastres naturales relacionados con el agua.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- fin Twitter de SMN -->
             </div>
 
-            <div class="container-fluid px-5">
-              
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt maiores ullam necessitatibus distinctio eos, quos et consequuntur iusto libero veritatis hic adipisci molestiae optio nostrum porro eligendi, repellat sit pariatur odit nulla nesciunt beatae, est excepturi ea? Incidunt, ullam ad? Libero possimus facilis, dignissimos expedita, unde quas, laboriosam suscipit quam vel quisquam qui iure velit error minima? Fugiat debitis excepturi architecto reiciendis consequuntur iure, voluptatum, nisi autem eligendi totam consequatur unde beatae libero ducimus sed necessitatibus sint modi quis eius, mollitia ipsa? Reiciendis nesciunt omnis ipsam illum magnam, similique in! Fuga facere cum nihil harum asperiores consectetur debitis ut reiciendis!</p>
+            <!-- ======= Servicios de meteorología ======= -->
+            <section id="services" class="services">
+              <div class="container Services" data-aos="fade-up">
 
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam odit, cupiditate voluptas autem doloremque quas accusantium saepe, ipsa laudantium quod eius tempora commodi corrupti recusandae, rerum modi ratione quam cum odio tempore expedita! Eveniet culpa vel, quidem placeat voluptatum laudantium doloremque nisi fuga nesciunt deleniti aut ab minus at asperiores. Accusamus minus impedit beatae, cumque totam voluptatum sequi repellat possimus porro quibusdam, iure fugit inventore adipisci quisquam delectus odit enim id voluptate veniam et sunt molestiae? Dignissimos, officia laborum ipsam officiis nobis, iusto praesentium nulla ipsum tempore nam perferendis corrupti ut fuga ratione quae illo. Unde incidunt dignissimos aspernatur ea?</p>
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#ffc451" class="bi bi-tropical-storm" viewBox="0 0 16 16">
+                        <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                        <path d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2M8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+                      </svg>
+                      <div class="py-1"></div>
+                      <h4><a href="https://smn.conagua.gob.mx/es/" target="_blank">SMN</a></h4>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, consequatur.</p>
+                      <div class="py-1"></div>
+                      <a href="https://smn.conagua.gob.mx/es/" target="_blank" type="button" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta perferendis ad ullam aliquid odit omnis hic magnam quibusdam id ratione quas repellendus magni, illum ipsa commodi obcaecati a, ex similique quod quisquam quo vitae ipsum. Autem modi a facilis repellendus aperiam dolores eius velit nobis, expedita non mollitia labore omnis odit cum. Amet vitae culpa rerum aperiam distinctio, eius consequuntur suscipit blanditiis odit, officiis enim, dolore pariatur sint repellat possimus voluptatum similique ipsa molestiae laboriosam obcaecati corrupti minus vero doloribus a? Voluptate dolores voluptatum quas officiis aliquam? Ipsam exercitationem placeat illo enim error assumenda sint minima cumque fuga suscipit.</p>
-              
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, dolor quisquam. Distinctio, dolorem praesentium laboriosam fuga, voluptates consectetur fugit error deleniti facere adipisci officiis! Dignissimos modi, temporibus, nesciunt nemo cupiditate tenetur suscipit quam voluptate officiis reiciendis beatae! Totam perferendis illum est amet asperiores nesciunt magni laboriosam animi, nostrum nam. Minima officia nam sit quae obcaecati repellat quas similique, consequuntur neque nemo ratione ab accusamus odit fuga quos reprehenderit, sint maxime illum eum. Consequatur nemo aspernatur ut facere maxime nobis! Nemo voluptatibus facere laborum officia repellat neque eos, ducimus sit veniam quaerat sed illum dolorum nobis tempora, quas assumenda sapiente vero!</p>
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#ffc451" class="bi bi-droplet" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                        <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z"/>
+                      </svg>
+                      <div class="py-1"></div>
+                      <h4><a href="https://www.gob.mx/conagua">CONAGUA</a></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, voluptatum!</p>
+                      <div class="py-1"></div>
+                      <a href="https://www.gob.mx/conagua" target="_blank" type="button" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
 
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#ffc451" class="bi bi-book" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                      </svg>
+                      <div class="py-1"></div>
+                      <h4><a href="https://smn.conagua.gob.mx/es/smn/glosario">Glosario</a></h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, reprehenderit!</p>
+                      <div class="py-1"></div>
+                      <a href="https://smn.conagua.gob.mx/es/smn/glosario" target="_blank" type="button" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><!-- fin Servicios de meteorología -->
+          </section><!-- fin Meteorología -->
+
+          <!-- ======= Pronóstico  ======= -->
+          <section id="pronostico" class="testimonials">
+            <div class="container" data-aos="zoom-in">
+              <div class="text-center">
+                <h3>Pronóstico del clima</h3>
+                <p>Sumérgete en la experiencia de explorar pronósticos diarios y extendidos que te permitirán planificar con confianza cada jornada.</p>
+                <a href="#about" class="get-started-btn scrollto">Explorar</a>
+              </div>
+            </div>
+            <div class="container-fluid py-3 px-0">
+              <a class="weatherwidget-io" href="https://forecast7.com/es/19d43n99d13/mexico-city/" data-label_1="MEXICO CITY" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-theme="orange" >MEXICO CITY WEATHER</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+            </div>
+            <div class="container" data-aos="fade-left" data-aos-delay="100">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-1 order-lg-2">
+                  <iframe src="https://www.meteoblue.com/en/weather/maps/widget/mexico-city_mexico_3530597?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=4&autowidth=auto"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%; height: 355px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/maps/mexico-city_mexico_3530597?utm_source=weather_widget&utm_medium=linkus&utm_content=map&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>meteoblue</h3>
+                  <p>Meteoblue es un servicio meteorológico creado en la Universidad de Basilea, Suiza, en cooperación con la Administración Nacional Oceánica y Atmosférica de los Estados Unidos y los Centros Nacionales de Predicción Ambiental. En 2006, meteoblue se fundó como una empresa spin-off con el fin de servir a los clientes, especialmente en el área de la agricultura, así como la energía solar y eólica.</p>
+                  <p>Después de la transición a una compañía meteorológica privada, meteoblue era el primer servicio meteorológico del mundo para ofrecer la predicción del tiempo en una sinopsis gráfica para cualquier lugar arbitrariamente elegido en la tierra.</p>
+                  <a href="https://www.meteoblue.com/es/tiempo/semana/ciudad-de-méxico_méxico_3530597" target="_blank" class="get-started-btn scrollto">visitar</a>
+                </div>
+              </div>
+            </div>
+          </section><!-- Fin Pronóstico -->
+
+          <!-- ======= Noticias ======= -->
+          <section id="noticias" class="about">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+              <div class="section-title">
+                <h2>Noticias</h2>
+              </div>
+              <!-- Tarjetas con información -->
               <div class="row" data-masonry='{"percentPosition": true }'>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title that wraps to a new line</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card p-3">
-                    <figure class="p-3 mb-0">
-                      <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card text-bg-primary text-center p-3">
-                    <figure class="mb-0">
-                      <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer mb-0 text-white">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card text-center">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card">
-                    <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card p-3 text-end">
-                    <figure class="mb-0">
-                      <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://smn.conagua.gob.mx/es/pronosticos/pronosticossubmenu/pronostico-meteorologico-general" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/smn.jpg" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Servicio Meteorológico Nacional</h5>
+                        <p class="card-text" >Consulta el pronóstico oficial para la semana del Servicio Meteorológico Nacional</p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.meteored.mx/mapas-meteorologicos/" class="text-decoration-none" target="_blank">
+                    <div class="card text-bg-warning text-center p-3">
+                      <figure class="mb-0">
+                        <blockquote class="blockquote">
+                          <div class="container-fluid">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+                              <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8m4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+                              <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+                            </svg>
+                            <p>Consulta mapas interactivos</p>
+                          </div>
+                        </blockquote>
+                        <p>https://www.meteored.mx</p>
+                      </figure>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.excelsior.com.mx/nacional/clima-mexico-hoy-13-diciembre-2023-lluvias-frio/1624927" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="recursos/img/noticia1.jpg" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Clima México este 13 de diciembre de 2023: Se esperan lluvias y frío</h5>
+                        <p class="card-text"><small class="text-body-secondary">Excélsior</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.milenio.com/politica/comunidad/clima-16-diciembre-pronostican-lluvias-caida-nieve-mexico" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/noticia2.webp" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">¡Saca el paraguas! Pronostican lluvias y caída de nieve HOY; revisa aquí el pronóstico del clima</h5>
+                        <p class="card-text"><small class="text-body-secondary">Milenio</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <div class="card border-bottom">
+                    <a href="https://smn.conagua.gob.mx/es/pronosticos/pronosticossubmenu/imagen-interpretada" target="_blank" data-gallery="portfolio-gallery-app"  class="glightbox"><img src="assets/img/imagenInterpretada.jpg" class="img-fluid" alt=""></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.foxsports.com.mx/2023/12/15/nevadas-y-heladas-en-mexico-estados-afectados-y-clima-por-frente-frio-17-hoy-15-de-diciembre/" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/noticia3.avif" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">¡Nevadas y heladas en México! Estados afectados y clima por Frente Frío 17</h5>
+                        <p class="card-text"><small class="text-body-secondary">FOX Sports</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.radioformula.com.mx/nacional/2023/12/16/clima-hoy-sabado-16-de-diciembre-heladas-temperaturas-de--5-grados-azotaran-estos-estados-794291.html" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/noticia4.jpg" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Clima hoy sábado 16 de diciembre: Heladas y temperaturas de -5 grados azotarán estos estados</h5>
+                        <p class="card-text"><small class="text-body-secondary">Radio Fórmula</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.unotv.com/clima/clima-en-el-estado-de-mexico-para-el-15-de-diciembre-de-2023/" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/noticia5.png" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Clima en el Estado de México para el 15 de diciembre de 2023</h5>
+                        <p class="card-text"><small class="text-body-secondary">UNO TV</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="https://www.eluniversal.com.mx/tag/clima-cdmx/" class="text-decoration-none" target="_blank">
+                    <div class="card border-bottom">
+                      <img src="assets/img/noticia6.avif" class="img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Noticias Clima</h5>
+                        <p class="card-text"><small class="text-body-secondary">El Universal</small></p>
+                      </div>
+                    </div>
+                  </a>                  
+                </div>              
+
+              </div><!-- Tarjetas con información -->
             </div>
+          </section><!-- ======= Fin de Noticias ======= -->
 
 
         </main>
+
+
+        <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>CLIMA<span> MX</span></h3>
+              <p>
+                Díaz Hernández Emilio <br>
+                González Manzano Leonardo <br>
+                Licea Castro Leonardo <br>
+                Tovar Vite Rocio Angelica
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">Acerca de</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#meteorologia">Meteorología</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pronostico">Pronóstico</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#noticias">Noticias</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Alertas del clima</h4>
+            <p>Suscríbete para recibir alertas del clima a tu correo, puedes cancelar la suscripción en cualquier momento</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Suscribirme">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="credits">
+        <a href="https://escom.ipn.mx" target="_blank">Escuela Superior de Cómputo</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
     </body>
 </html>
