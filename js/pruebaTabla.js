@@ -10,6 +10,7 @@ let dia1 = new Array(5).fill(0);
 let dia2 = new Array(5).fill(0);
 let dia3 = new Array(5).fill(0);
 let dia4 = new Array(5).fill(0);
+let cargado = false;
 
 //Se recorre el array de clima para generar las filas de la tabla de clima, además de guardar los nombres de los estados y los días
 arrClimas.forEach((obj) =>{
@@ -302,6 +303,8 @@ $(document).ready(() => {
   graficasPastel('pastelDia2',dia2, dias[1]);
   graficasPastel('pastelDia3',dia3, dias[2]);
   graficasPastel('pastelDia4',dia4, dias[3]);
+
+  cargado = true;
 });
 
 function graficasPastel(id,datos,titulo){
