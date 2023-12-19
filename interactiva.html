@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Proyecto Web</title>
+
+  <!-- Referencias Hojas Estilo Cascada-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+  <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.carousel');
+      var options = {
+        fullWidth: true,
+        indicators: true
+      };
+      var instances = M.Carousel.init(elems, options);
+    });
+
+
+
+  </script>
+
+
+<style>
+  .carousel {
+min-height: 80vh; /* Establece el ancho máximo del carrusel */
+margin: auto; /* Centra el carrusel en el contenedor */
+}
+
+.carousel-item img {
+min-height: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+
+
+</style>
+
+  
+
+
+</head>
+
+<body>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>¡HOLA! Bienvenido a ClimaMX</h4>
+        <br>
+        <hr>
+        <h6>Te mostrare como puedes utilizar la pagina de una forma simple y divertida.</h6>
+        <br>
+        <h6>En cada apartado encontraras un pequeño boton naranja  <button class="waves-effect waves-light btn-small red"><i class="fa-solid fa-circle-info"></i></button>  , si deseas obtener indicaciones de como usar esa sección, solo da click sobre el.</h6>
+        <h6>Tambien encontraras los botones verdes que se hacen grandes y pequeños  <button class="btn-large orange">VER CLIMA</button>  , el cual deberas de presionar para hacer la busqueda que deseas.</h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>BUSQUEDA POR FILTROS</h4>
+        <br>
+        <hr>
+        <h6>Aqui podras seleccionar entre todos los estados de la Republica Mexicana, una vez selecciones un estado, la siguiente lista de opciones se actualizara y te dara un listado, podras escoger un municipio de ese estado, finalmente escoge el dia del cual deseas saber el clima, despues que hayas llenado estos campos, da click en <button class="btn-large">VER CLIMA</button>  .</h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4>VISTA GENERAL DE TODOS LOS MUNICIPIOS</h4>
+        <br>
+        <hr>
+        <h6>En la siguiente tabla, encontraras los datos de pronostico general de todos los municipios del pais, cada boton de la parte superior contiene 5 municipios  <button class="waves-effect waves-light btn-small">1</button>  .</h6>
+        <h6>Una vez que hayas revisado las primeras 5 tablas, puedes dar click en los botones  <button class="waves-effect waves-light btn-small"><i class="material-icons">chevron_left</i></button>   ó   <button class="waves-effect waves-light btn-small"><i class="material-icons">chevron_right</i></button>   para acceder a los siguientes 5 tablas de municipios, recuerda que en cada tabla se encuentran 5 municipios, y en cada sección 5 tablas.  </h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h4>MAPA Y CLIMA DE MÉXICO</h4>
+        <br>
+        <hr>
+        <h6>
+          En esta seccion, encontraras en la parte de arriba, los diversos climas que puedes encontrar en México, solo tienes que deslizar para cambiar.
+        </h6>
+        <h6>En la parte de abajo de la misma forma, solo desliza para poder ir viendo las diferentes descripciones de cada clima.   <i class="fa-solid fa-hand-point-up fa-2xl"></i>  </h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <h4>JUEGA A UN JUEGO DEL CLIMA</h4>
+        <br>
+        <hr>
+        <h6>Al hacer click en este boton te mandara a una pagina que te permitira jugar  <i class="fa-solid fa-gamepad fa-flip fa-2xl"></i>   un simple pero entretenido juego en el que tienes que atrapar a la nube   <i class="fa-solid fa-cloud fa-spin fa-spin-reverse fa-2xl"></i>   , si lo haces antes de que el tiempo se termine !GANASTE¡.</h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <h4>COMPARACIÓN CLIMA A DIAS</h4>
+        <br>
+        <hr>
+        <h6>En esta grafica, puedes seleccionar la forma en la que compares el clima de el dia de hoy, y los 3 dias posteriores:  
+        <br>
+        <br>
+        <i class="fa-sharp fa-solid fa-house fa-bounce fa-xl"></i>
+        <i class="fa-solid fa-cloud-sun fa-beat-fade fa-2xl"></i>
+        <i class="fa-solid fa-droplet fa-bounce fa-2xl"></i>
+        <i class="fa-solid fa-wind fa-beat-fade fa-2xl"></i>
+        <i class="fa-solid fa-temperature-arrow-up fa-beat-fade fa-2xl"></i>
+        <i class="fa-solid fa-temperature-arrow-down fa-beat-fade fa-2xl"></i>
+          
+        </h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+
+
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="index.html" class="brand-logo center white-text">CLIMA <span class="yellow-text">MX</span></a>
+    </div>
+  </nav>
+    
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h3 class="header center teal-text text-lighten-2 light"><span class="white-text">VERSION INTERACTIVA</span></h3>
+
+        <br>
+        <div class="row center">
+          <h1><i class="fa-solid fa-earth-americas fa-2xl" style="color: #e4a825;"></i></h1>
+          <br>
+          <br>
+          <h5 class="header col s12 light"><span class="white-text">Una versión mas simple,</span><span class="white-text">los mismos resultados.</span> </h5>
+          <br>
+          <br>
+        </div>
+        
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="recursos/img/El-Clima-hoy.webp" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="">
+    <br>
+    <br>
+    <div class="row center">
+      <button class="btn-large light-green darken-4" id="abc">VER TUTORIAL</button>
+    </div>
+  
+    
+  
+    <div class="container">
+      <div class="section">
+  
+        <div class="row" id="filrt">
+  
+          <strong><h4 class="orange-text text-darken-4">Realiza una busqueda por filtros: <button class="waves-effect waves-light btn-small red" id="inf"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+          <br>
+        
+          <div class="col s4">
+            <div class="card hoverable">
+              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Aqui puedes elegir cualquier estado, solo da click sobre el icono y se desplegara un listado, solo da click sobre el que sea de tu interes.">
+                <form>
+                  <label for='sug'>Selecciona un estado:</label>
+                  <input list='desarrollo-web' id='secEst' name='sug'>
+                  <datalist id='desarrollo-web'>
+                    <option>Aguascalientes </option>
+                    <option>Baja California </option>
+                    <option>Baja California Sur </option>
+                    <option>Campeche </option>
+                    <option>Chiapas </option>
+                    <option>Chihuahua </option>
+                    <option>Ciudad de México </option>
+                    <option>Coahuila </option>
+                    <option>Colima </option>
+                    <option>Durango </option>
+                    <option>Estado de México </option>
+                    <option>Guanajuato </option>
+                    <option>Guerrero </option>
+                    <option>Hidalgo </option>
+                    <option>Jalisco </option>
+                    <option>Michoacán </option>
+                    <option>Morelos </option>
+                    <option>Nayarit </option>
+                    <option>Nuevo León </option>
+                    <option>Oaxaca </option>
+                    <option>Puebla </option>
+                    <option>Querétaro </option>
+                    <option>Quintana Roo </option>
+                    <option>San Luis Potosí </option>
+                    <option>Sinaloa </option>
+                    <option>Sonora </option>
+                    <option>Tabasco </option>
+                    <option>Tamaulipas </option>
+                    <option>Tlaxcala </option>
+                    <option>Veracruz </option>
+                    <option>Yucatán </option>
+                    <option>Zacatecas </option>
+                  </datalist>
+                </form>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="col s4">
+            <div class="card hoverable">
+              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Para poder seleccionar un municipio, recuerda antes haber elegido un estado, aqui se desplegara un listado con los municipios de dicho estado.">
+                <form>
+                  <label for='sug'>Selecciona un municipio:</label>
+                  <input list='mun' id='sMun' name='sug'>
+                  <datalist id='mun'>
+                    <option>Seleccione un estado</option>
+                  </datalist>
+                </form>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col s4">
+            <div class="card hoverable">
+              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Elige el dia del que deseas consultar el clima, puedes escoger el de hoy, o el de cualquiera de los proximos tres dias posteriores a hoy.">
+                <form>
+                  <label for='sug'>Selecciona un dia:</label>
+                  <input list='eo' id='sDia' name=''>
+                  <datalist id='eo'>
+                    <option>HOY</option>
+                    <option>MAÑANA</option>
+                    <option>2 DIAS</option>
+                    <option>3 DIAS</option>
+                  </datalist>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div> 
+  
+  
+    <div class="row center">
+      <button class="btn-large tooltipped orange" id="botonClima">VER CLIMA</button>
+    </div>
+  
+    <br>
+    
+    <div class="container" id="tabla">
+      <div class="section">
+        <table class="des" id="tabB">
+          <thead>
+            <tr>
+              <th>ESTADO</th>
+              <th>MUNICIPIO</th>
+              <th>T. MINIMA (°C)</th>
+              <th>T. MAXIMA (°C)</th>
+              <th>PRECIPITACION (%)</th>
+              <th>NUBLADO (%)</th>
+              <th>VIENTOS (Km/h)</th>
+            </tr>
+            
+          </thead>
+          <tbody id="res">
+            
+          </tbody>
+          <tfoot>
+  
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  
+    <div class="des" id="pronostico">
+      <div class="container center">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="row">
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-sharp fa-solid fa-house fa-xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">ENTIDAD</h5>
+                  <div id="entidad">
+                    <p class="light">.</p>
+                  </div>
+                  
+                </div>
+              </div>
+      
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-solid fa-cloud-sun  fa-2xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">DESCRIPCION CIELO</h5>
+      
+                  <div id="cielo">
+                    <p class="light">.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-solid fa-droplet  fa-2xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">PRECIPITACIONES</h5>
+      
+                  <div id="lluvia">
+                    <p class="light">.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+    
+            <div class="row">
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-solid fa-wind  fa-2xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">VIENTOS</h5>
+      
+                  <div id="viento">
+                    <p class="light">.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-solid fa-temperature-arrow-up  fa-2xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">TEMPERATURA MAXIMA</h5>
+      
+                  <div id="tmax">
+                    <p class="light">.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <br>
+                  <h1><i class="fa-solid fa-temperature-arrow-down  fa-2xl"></i></h1>
+                  <br>
+                  <br>
+                  <h5 class="center">TEMPERATURA MINIMA</h5>
+      
+                  <div id="tmin">
+                    <p class="light">.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <br>
+  
+  
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <strong><h4 class="orange-text text-darken-4">COMPARACION DE CLIMA A DIAS <button class="waves-effect waves-light btn-small red" id="inf5"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+            <br>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container center">
+        <div class="section center">
+          <div class="row center">
+  
+            <div class="col s4">
+              <div class="card hoverable">
+                <div class="card-content tooltipped" data-position="bottom" data-tooltip="Elige que deseas comparar de hoy y los 3 posteriores dias.">
+                  <form>
+                    <label for='sug'>Parametro a Comparar:</label>
+                    <input list='leo' id='pam' name=''>
+                    <datalist id='leo'>
+                      <option>Probabilidad de Precipitación</option>
+                      <option>Velocidad de Viento</option>
+                      <option>Temperatura Minima</option>
+                      <option>Temperatura Maxima</option>
+                    </datalist>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="row center">
+        <button class="btn-large tooltipped orange" id="comparar" data-position="bottom" data-tooltip="Da click sobre este boton una vez hayas seleccionado un parametro a comparar.">COMPARAR</button>
+        <br>
+        <h4 id="pron">GRAFICO COMPARATIVO - TEMPERATURA MAXIMA</h4>
+      </div>
+  
+  
+  
+      <div class="container">
+        <div class="row center grey lighten-5">
+          <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+            <canvas id="miGrafica"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+  
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        
+        <strong><h4 class="orange-text text-darken-4">Clima General - Municipios: <button class="waves-effect waves-light btn-small red" id="inf2"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="row center">
+    <div class="container">
+
+
+
+      <div class="row center">
+        <div class="container">
+          <div class="section">
+
+            <div class="m6">
+              <div class="card grey darken-1">
+
+                <div class="card-content white-text">
+                  <span class="card-title">Clima de los Municipios</span>
+
+                  <div class="container">
+                    <div class="section" id="listN">
+                      <ul class="pagination center tooltipped" data-position="bottom" data-tooltip="Este es un listado general de todos los municipios, puedes escoger cualquier numero de la lista o ir a los siguientes 5 listados.">
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="ant"><i class="material-icons">chevron_left</i></button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="primero">1</button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="segundo">2</button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="tercero">3</button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="cuarto">4</button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="quinto">5</button></li>
+                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="sig"><i class="material-icons">chevron_right</i></button></li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                  <table class="responsive-table">
+                    <thead>
+
+                      <tr>
+                        <th>ESTADO</th>
+                        <th>MUNICIPIO</th>
+                        <th>T. MINIMA (°C)</th>
+                        <th>T. MAXIMA (°C)</th>
+                        <th>PRECIPITACION (%)</th>
+                        <th>NUBLADO (%)</th>
+                        <th>VIENTOS (Km/h)</th>
+                      </tr>
+                    </thead>
+
+                    <tbody id="ps">
+                      
+                      <tr>
+                        <td>Aguascalientes</td>
+                        <td>Aguascalientes</td>
+                        <td>17.99</td>
+                        <td>24.59</td>
+                        <td>95.00</td>
+                        <td>95.54</td>
+                        <td>7.14</td>
+                      </tr>
+
+                      <tr>
+                        <td>Aguascalientes</td>
+                        <td>El Llano</td>
+                        <td>16.97</td>
+                        <td>23.93</td>
+                        <td>95.00</td>
+                        <td>95.57</td>
+                        <td>7.67</td>
+                      </tr>
+
+                      <tr>
+                        <td>Aguascalientes</td>
+                        <td>San Francisco de los Romo</td>
+                        <td>16.96</td>
+                        <td>24.09</td>
+                        <td>95.00</td>
+                        <td>95.80</td>
+                        <td>7.48</td>
+                      </tr>
+
+                      <tr>
+                        <td>Aguascalientes</td>
+                        <td>Asientos</td>
+                        <td>17.18</td>
+                        <td>23.95</td>
+                        <td>95.00</td>
+                        <td>95.78</td>
+                        <td>7.75</td>
+                      </tr>
+
+                      <tr>
+                        <td>Aguascalientes</td>
+                        <td>Calvillo</td>
+                        <td>17.17</td>
+                        <td>23.58</td>
+                        <td>95.00</td>
+                        <td>95.73</td>
+                        <td>6.98</td>
+                      </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                    </tfoot>
+
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <strong><h4 class="orange-text text-darken-4">Climas de México: <button class="waves-effect waves-light btn-small red" id="inf3"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  
+
+  <div class="container">
+    <div class="carousel carousel-slider center">
+
+      <div class="carousel-item red white-text" id="mapeo">
+        <div class="card-content white-text">
+          <h4>Clima Árido y Semidesértico</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Norte de México, incluyendo partes de los estados de Baja California, Sonora, Chihuahua y Coahuila.<br>
+            Características: Precipitación escasa, altas temperaturas diurnas y variaciones extremas entre el día y la noche.</p>
+        </div>
+        
+        <img src="recursos/img/Clima Árido y Semidesértico.jpg" alt="xd">
+
+
+
+      </div>
+
+      
+
+
+      <div class="carousel-item amber white-text">
+        <div class="card-content white-text">
+          <h4>Clima Desértico</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Principalmente en la región norte del país, abarcando partes de Baja California, Sonora y Chihuahua.<br>
+            Características: Temperaturas extremadamente altas durante el día y bajas durante la noche, con precipitación muy limitada.</p>
+        </div>
+        <img src="recursos/img/Clima Desértico.jpg" alt="xd">
+
+      </div>
+
+      <div class="carousel-item green white-text">
+        <div class="card-content white-text">
+          <h4>Clima Templado</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Presente en gran parte del altiplano central, incluyendo la Ciudad de México y zonas circundantes.<br>
+            Características: Estaciones bien definidas con veranos cálidos e inviernos frescos, con precipitación moderada.</p>
+        </div>
+        <img src="recursos/img/Clima Templado.jpg" alt="xd">
+
+      </div>
+
+      <div class="carousel-item blue white-text">
+        <div class="card-content white-text">
+          <h4>Clima Tropical</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Zonas costeras del Golfo de México, la Península de Yucatán y la costa del Pacífico.<br>
+            Características: Altas temperaturas durante todo el año, con una estación de lluvias en verano.</p>
+        </div>
+        <img src="recursos/img/Clima Tropical.jpg" alt="xd">
+
+      </div>
+
+      <div class="carousel-item red white-text">
+        <div class="card-content white-text">
+          <h4>Clima Subtropical</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Algunas áreas de la costa del Golfo de México y la península de Baja California.<br>
+            Características: Inviernos suaves, veranos cálidos y precipitación moderada durante todo el año.</p>
+        </div>
+        <img src="recursos/img/Clima Subtropical.jpg" alt="xd">
+      </div>
+
+      <div class="carousel-item amber white-text">
+        <div class="card-content white-text">
+          <h4>Clima de Montaña</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Presente en las áreas montañosas del país, como la Sierra Madre Occidental y Oriental.<br>
+            Características: Variedad de climas según la altitud, con temperaturas más frescas a medida que se asciende.</p>
+        </div>
+        <img src="recursos/img/Clima de Montaña.jpg" alt="xd">
+
+      </div>
+
+      <div class="carousel-item green white-text">
+        <div class="card-content white-text">
+          <h4>Clima Selvático (Selva Tropical)</h4>
+          <br>
+          <hr>
+
+          <p>
+            Ubicación: Principalmente en el sureste de México, en el estado de Chiapas y partes de Tabasco y Quintana Roo.<br>
+            Características: Alta precipitación, altas temperaturas y una estación de lluvias bien marcada.</p>
+        </div>
+        <img src="recursos/img/Clima Selvático (Selva Tropical).jpg" alt="xd">
+
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+
+
+
+</div>
+
+
+</div>
+
+  <br>
+  <br>
+  <!--
+  <hr>
+
+  <div>
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <strong><h4 class="orange-text text-darken-4">MINIJUEGO DEL CLIMA <button class="waves-effect waves-light btn-small red" id="inf4"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+          <br>
+        </div>
+      </div>
+    </div>
+    <br>
+  
+  
+  
+    <div class="row center">
+      <div class="container">
+        <div class="section">
+  
+          <div class="row center">
+            <div class="col s12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  
+                  <a href="juego.html"><button class="btn-large tooltipped" data-position="bottom" data-tooltip="Da click sobre este boton si deseas jugar un minijuego ocasional." id="juegar">JUEGA UN MINIJUEGO <i class="fa-solid fa-gamepad fa-bounce fa-xl"></i></button></a>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.juegos.com/">ACCEDE A MAS JUEGOS EN LINEA</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+      </div>
+    </div>
+  
+   <br>
+  </div>-->
+  
+  <footer class="page-footer teal  tooltipped grey darken-3" data-position="top" data-tooltip="Aqui encontraras información de los desarrolladores de esta pagina, si tienes alguna duda/sugerencia puedes comunicarte con nosotros por estos medios de contacto.">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col l3 s12">
+          <h5 class="white-text">CLIMA<span class="yellow-text text-accent-4"> MX</span></h5>
+          <p>
+            Díaz Hernández Emilio <br>
+            González Manzano Leonardo <br>
+            Licea Castro Leonardo <br>
+            Tovar Vite Rocio Angelica
+          </p>
+        </div>
+  
+        <div class="col l3 s12">
+          <h5 class="white-text">Nuestros Servicios</h5>
+          <ul>
+            <li><a class="white-text" href="index.html">Regreso</a></li>
+            <li><a class="white-text" href="tablaCompleta.html">Página de pronósticos</a></li>
+          </ul>
+        </div>
+  
+        <div class="col l4 s12">
+          <h5 class="white-text">Alertas del clima</h5>
+          <p>Suscríbete para recibir alertas del clima a tu correo, puedes cancelar la suscripción en cualquier momento</p>
+          <form action="" method="post">
+            <div class="input-field inline">
+              <input id="email" type="email" class="validate" name="email">
+              <label for="email">Correo electrónico</label>
+            </div>
+            <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">Suscribirme
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="footer-copyright">
+      <div class="container">
+        © ESCOM - IPN - Ciudad de México
+      </div>
+    </div>
+  </footer>
+
+<!--
+  <footer class="page-footer teal  tooltipped grey darken-3" data-position="top" data-tooltip="Aqui encontraras información de los desarrolladores de esta pagina, si tienes alguna duda/sugerencia puedes comunicarte con nosotros por estos medios de contacto.">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Proyecto Final - Front-end</h5>
+          <p class="grey-text text-lighten-4">Esta pagina fue desarrollada usando las tecnologias de HTML5, CSS3, JavaScript, JQuery, JSon, entre otras. Esta pagina recopila nuestro aprendizaje adquirido durante el curso de Tecnologias para la Web, correspondiente al 4to semestre de la carrera de Ingenieria en Sistemas Computacionales en la ESCOM.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Miembros</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Diaz Hernandez Emilio</a></li>
+            <li><a class="white-text" href="#!">Gonzalez Manzano Leonardo</a></li>
+            <li><a class="white-text" href="#!">Licea Castro Leonardo</a></li>
+            <li><a class="white-text" href="#!">Tovar Vite Rocio Angelica</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contacto</h5>
+          <ul>
+            <li><a class="white-text" href="#!">(52)-55-73-94-39-40</a></li>
+            <li><a class="white-text" href="#!">(71)-73-86-23-22-22</a></li>
+            <li><a class="white-text" href="#!">(09)-94-43-88-64-07</a></li>
+            <li><a class="white-text" href="#!">(87)-73-46-49-11-24</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © ESCOM - IPN - Ciudad de México
+      </div>
+    </div>
+  </footer>
+-->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index1.js"></script>
+  <script src="js/jsonClima.js"></script>
+  <script src="libs/jquery-3.7.1.min.js"></script>
+
+
+
+  </body>
+</html>
