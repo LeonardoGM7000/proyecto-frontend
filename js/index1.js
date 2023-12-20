@@ -5,12 +5,83 @@ var miGrafica;
 //var botonN=document.getElementById("botonNav");
 //botonN.addEventListener("click",obtenerB,false); //Realiza la busqueda de la barra de navegacion
 
+//RELLENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+document.getElementById("verMi").addEventListener("click",function(){
+
+    //var actual;
+    document.getElementById("loader").style.display="block";
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("La geolocalización no es compatible con este navegador.");
+        document.getElementById("loader").style.display="none";
+    }
+    
+    function showPosition(position) {
+        // Obtenemos las coordenadas
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+    
+        // Llamamos a la API de geocodificación inversa para obtener la información de la ubicación
+        var apiURL = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
+        
+        fetch(apiURL)
+          .then(response => response.json())
+          .then(data => {
+            // Extraemos el nombre de la alcaldía o municipio
+            var alcaldia = data.address.suburb || data.address.neighbourhood;
+            
+            // Mostramos el resultado
+            //alert(`Te encuentras en la alcaldía de ${alcaldia}`);
+            //actual=`${alcaldia}`;
+            //mostrarActual(actual);
+            document.getElementById("secEst").value="Ciudad de México";
+            document.getElementById("sMun").value=`${alcaldia}`;
+            document.getElementById("sDia").value="HOY";
+        
+            procesarDatos();
+            window.location.href = '#tabla';
+            document.getElementById("loader").style.display="none";
+
+          })
+          .catch(error => {
+            console.error('Error al obtener la información de ubicación:', error);
+            document.getElementById("loader").style.display="none";
+          })
+          .finally(error => {
+            document.getElementById("loader").style.display="none";
+          });
+    }
+
+    
+
+    //window.alert("Hola");
+});
+/*
+function mostrarActual(munAct){
+    window.alert("TE EBCUENTRAS EN:"+munAct);
+    document.getElementById("secEst").value="Ciudad de México";
+    document.getElementById("sMun").value=munAct;
+    document.getElementById("sDia").value="HOY";
+
+    procesarDatos();
+}*/
+
+//RELLENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
 
 document.getElementById("abc").addEventListener("click",function(){
+
     introJs().setOptions({
         steps: [
           {
             intro: '¡Bienvenido a nuestra pagina! A continuación, te mostrare como utilizarla de manera sencilla.',
+          },
+          {
+            element: "#verMi",
+            intro: 'Aqui podras consultar directamente el clima de la localidad en la que te encuentras actualmente, solo con un click.',
           },
           {
             element: "#filrt",
@@ -87,6 +158,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var modalInstance = M.Modal.getInstance(document.getElementById('modal1'));
     modalInstance.open();
 });
+
+document.getElementById("mostrarMas").addEventListener("click",function(){
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+
+    // Abre el modal automáticamente
+    var modalInstance = M.Modal.getInstance(document.getElementById('modal22'));
+    modalInstance.open();
+
+});////////////////
 
 document.getElementById("inf").addEventListener("click",function(){
     var elems = document.querySelectorAll('.modal');

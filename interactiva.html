@@ -5,7 +5,7 @@
   
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Clima MX - Versión interactiva</title>
+  <title>METEO MEX - Versión interactiva</title>
   <link rel="icon" href="assets/img/logoIcon.ico">
 
   <!-- Referencias Hojas Estilo Cascada-->
@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
   <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 
+
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.carousel');
@@ -26,7 +28,6 @@
       };
       var instances = M.Carousel.init(elems, options);
     });
-
 
 
   </script>
@@ -45,6 +46,18 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
 
 
 
+  .animated-icon{
+        animation: fa-bounce 3s 2; /* 2s es la duración de la animación, ajusta según sea necesario */
+  }
+
+      /* Agrega un contenedor con desplazamiento horizontal */
+      .scroll-horizontal {
+      overflow-x: auto;
+      white-space: nowrap; /* Evita el salto de línea */
+    }
+
+
+
 </style>
 
   
@@ -57,7 +70,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
       <div class="modal-content">
-        <h4>¡HOLA! Bienvenido a ClimaMX</h4>
+        <h4>¡HOLA! Bienvenido a METEO MEX</h4>
         <br>
         <hr>
         <h6>Te mostrare como puedes utilizar la pagina de una forma simple y divertida.</h6>
@@ -149,11 +162,42 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
       </div>
     </div>
 
+    <!-- Modal Structure -->
+    <div id="modal22" class="modal">
+      <div class="modal-content">
+        <h4>ACCEDE AL PRONOSTICO DE TU UBICACIÓN EXACTA</h4>
+        <br>
+        <hr>
+        <h6>Aqui podras acceder directamente al clima de tu localidad con un solo click, la pagina determinara tu ubicación y te mostrara el pronostico.  
+        <br>
+        <br>
+        <i class="fa-sharp fa-solid fa-house fa-bounce fa-xl"></i>
+        </h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
+    </div>
+
+        <!-- Modal Structure -->
+        <div id="modal111" class="modal">
+          <div class="modal-content">
+            <h4>¡GRACIAS POR SUSCRIBIRTE!</h4>
+            <br>
+            <hr>
+            <h6>A partir de ahora podras recibir el pronostico de manera diaria directamente a tu correo, recuerda que puedes cancelar este servicio en cualquier momento y que no tiene ningun costo alguno.</h6>
+            <br>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+
 
 
   <nav>
     <div class="nav-wrapper grey darken-3">
-      <a href="index.html" class="brand-logo center white-text">CLIMA <span class="yellow-text">MX</span></a>
+      <a href="index.html" class="brand-logo center white-text">METEO <span class="yellow-text">MEX</span></a>
     </div>
   </nav>
     
@@ -165,7 +209,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
 
         <br>
         <div class="row center">
-          <h1><i class="fa-solid fa-earth-americas fa-2xl" style="color: #e4a825;"></i></h1>
+          <h1><i class="fa-solid fa-earth-americas fa-2xl animated-icon" style="color: #e4a825;"></i></h1>
           <br>
           <br>
           <h5 class="header col s12 light"><span class="white-text">Una versión mas simple,</span><span class="white-text">los mismos resultados.</span> </h5>
@@ -181,102 +225,144 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
   </div>
 
 
-  <div class="">
     <br>
     <br>
     <div class="row center">
       <button class="btn-large light-green darken-4" id="abc">VER TUTORIAL</button>
     </div>
-  
-    
-  
+
+    <!--RELLENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+    <br>
     <div class="container">
       <div class="section">
-  
-        <div class="row" id="filrt">
-  
-          <strong><h4 class="orange-text text-darken-4">Realiza una busqueda por filtros: <button class="waves-effect waves-light btn-small red" id="inf"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+
+        <strong><h4 class="orange-text text-darken-4">Obten el pronostico de tu ubicación actual: <button class="waves-effect waves-light btn-small red" id="mostrarMas"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
           <br>
-        
-          <div class="col s4">
-            <div class="card hoverable">
-              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Aqui puedes elegir cualquier estado, solo da click sobre el icono y se desplegara un listado, solo da click sobre el que sea de tu interes.">
-                <form>
-                  <label for='sug'>Selecciona un estado:</label>
-                  <input list='desarrollo-web' id='secEst' name='sug'>
-                  <datalist id='desarrollo-web'>
-                    <option>Aguascalientes </option>
-                    <option>Baja California </option>
-                    <option>Baja California Sur </option>
-                    <option>Campeche </option>
-                    <option>Chiapas </option>
-                    <option>Chihuahua </option>
-                    <option>Ciudad de México </option>
-                    <option>Coahuila </option>
-                    <option>Colima </option>
-                    <option>Durango </option>
-                    <option>Estado de México </option>
-                    <option>Guanajuato </option>
-                    <option>Guerrero </option>
-                    <option>Hidalgo </option>
-                    <option>Jalisco </option>
-                    <option>Michoacán </option>
-                    <option>Morelos </option>
-                    <option>Nayarit </option>
-                    <option>Nuevo León </option>
-                    <option>Oaxaca </option>
-                    <option>Puebla </option>
-                    <option>Querétaro </option>
-                    <option>Quintana Roo </option>
-                    <option>San Luis Potosí </option>
-                    <option>Sinaloa </option>
-                    <option>Sonora </option>
-                    <option>Tabasco </option>
-                    <option>Tamaulipas </option>
-                    <option>Tlaxcala </option>
-                    <option>Veracruz </option>
-                    <option>Yucatán </option>
-                    <option>Zacatecas </option>
-                  </datalist>
-                </form>
-              </div>
-            </div>
+
+          <br>
+          <div class="row center">
+            <button class="btn-large light-green darken-4" id="verMi">PRONOSTICO EN MI UBICACION</button>
           </div>
-  
-  
-          <div class="col s4">
-            <div class="card hoverable">
-              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Para poder seleccionar un municipio, recuerda antes haber elegido un estado, aqui se desplegara un listado con los municipios de dicho estado.">
-                <form>
-                  <label for='sug'>Selecciona un municipio:</label>
-                  <input list='mun' id='sMun' name='sug'>
-                  <datalist id='mun'>
-                    <option>Seleccione un estado</option>
-                  </datalist>
-                </form>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col s4">
-            <div class="card hoverable">
-              <div class="card-content tooltipped" data-position="bottom" data-tooltip="Elige el dia del que deseas consultar el clima, puedes escoger el de hoy, o el de cualquiera de los proximos tres dias posteriores a hoy.">
-                <form>
-                  <label for='sug'>Selecciona un dia:</label>
-                  <input list='eo' id='sDia' name=''>
-                  <datalist id='eo'>
-                    <option>HOY</option>
-                    <option>MAÑANA</option>
-                    <option>2 DIAS</option>
-                    <option>3 DIAS</option>
-                  </datalist>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div> 
       </div>
     </div> 
+
+
+
+    <div class="container center" id="loader" style="display: none;">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!--RELLENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+
+
+    <div class="container">
+      <div class="section">
+
+        <strong><h4 class="orange-text text-darken-4">Realiza una busqueda por filtros: <button class="waves-effect waves-light btn-small red" id="inf"><i class="fa-solid fa-circle-info"></i></button></h4></strong>
+          <br>
+      </div>
+    </div> 
+
+    <div class="container center">
+      <div class="col s12 m7">
+
+          <div class="row" id="filrt">
+
+            <div class="col s12 m4">
+              <div class="card hoverable">
+                <div class="card-content tooltipped" data-position="bottom" data-tooltip="Aqui puedes elegir cualquier estado, solo da click sobre el icono y se desplegara un listado, solo da click sobre el que sea de tu interes.">
+                  <form>
+                    <label for='sug'>Selecciona un estado:</label>
+                    <input list='desarrollo-web' id='secEst' name='sug'>
+                    <datalist id='desarrollo-web'>
+                      <option>Aguascalientes </option>
+                      <option>Baja California </option>
+                      <option>Baja California Sur </option>
+                      <option>Campeche </option>
+                      <option>Chiapas </option>
+                      <option>Chihuahua </option>
+                      <option>Ciudad de México </option>
+                      <option>Coahuila </option>
+                      <option>Colima </option>
+                      <option>Durango </option>
+                      <option>Estado de México </option>
+                      <option>Guanajuato </option>
+                      <option>Guerrero </option>
+                      <option>Hidalgo </option>
+                      <option>Jalisco </option>
+                      <option>Michoacán </option>
+                      <option>Morelos </option>
+                      <option>Nayarit </option>
+                      <option>Nuevo León </option>
+                      <option>Oaxaca </option>
+                      <option>Puebla </option>
+                      <option>Querétaro </option>
+                      <option>Quintana Roo </option>
+                      <option>San Luis Potosí </option>
+                      <option>Sinaloa </option>
+                      <option>Sonora </option>
+                      <option>Tabasco </option>
+                      <option>Tamaulipas </option>
+                      <option>Tlaxcala </option>
+                      <option>Veracruz </option>
+                      <option>Yucatán </option>
+                      <option>Zacatecas </option>
+                    </datalist>
+                  </form>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="card hoverable">
+                <div class="card-content tooltipped" data-position="bottom" data-tooltip="Para poder seleccionar un municipio, recuerda antes haber elegido un estado, aqui se desplegara un listado con los municipios de dicho estado.">
+                  <form>
+                    <label for='sug'>Selecciona un municipio:</label>
+                    <input list='mun' id='sMun' name='sug'>
+                    <datalist id='mun'>
+                      <option>Seleccione un estado</option>
+                    </datalist>
+                  </form>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="card hoverable">
+                <div class="card-content tooltipped" data-position="bottom" data-tooltip="Elige el dia del que deseas consultar el clima, puedes escoger el de hoy, o el de cualquiera de los proximos tres dias posteriores a hoy.">
+                  <form>
+                    <label for='sug'>Selecciona un dia:</label>
+                    <input list='eo' id='sDia' name=''>
+                    <datalist id='eo'>
+                      <option>HOY</option>
+                      <option>MAÑANA</option>
+                      <option>2 DIAS</option>
+                      <option>3 DIAS</option>
+                    </datalist>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+
+          </div>
+
+      </div>
+    </div>
   
   
     <div class="row center">
@@ -287,26 +373,31 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
     
     <div class="container" id="tabla">
       <div class="section">
-        <table class="des" id="tabB">
-          <thead>
-            <tr>
-              <th>ESTADO</th>
-              <th>MUNICIPIO</th>
-              <th>T. MINIMA (°C)</th>
-              <th>T. MAXIMA (°C)</th>
-              <th>PRECIPITACION (%)</th>
-              <th>NUBLADO (%)</th>
-              <th>VIENTOS (Km/h)</th>
-            </tr>
-            
-          </thead>
-          <tbody id="res">
-            
-          </tbody>
-          <tfoot>
-  
-          </tfoot>
-        </table>
+
+        <div class="scroll-horizontal">
+          <table class="des" id="tabB">
+            <thead>
+              <tr>
+                <th>ESTADO</th>
+                <th>MUNICIPIO</th>
+                <th>T. MINIMA (°C)</th>
+                <th>T. MAXIMA (°C)</th>
+                <th>PRECIPITACION (%)</th>
+                <th>NUBLADO (%)</th>
+                <th>VIENTOS (Km/h)</th>
+              </tr>
+              
+            </thead>
+            <tbody id="res">
+              
+            </tbody>
+            <tfoot>
+    
+            </tfoot>
+          </table>
+
+        </div>
+
       </div>
     </div>
   
@@ -318,7 +409,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-sharp fa-solid fa-house fa-xl"></i></h1>
+                  <h1><i class="fa-sharp fa-solid fa-house  fa-xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">ENTIDAD</h5>
@@ -332,7 +423,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-solid fa-cloud-sun  fa-2xl"></i></h1>
+                  <h1><i class="fa-solid fa-cloud-sun  fa-2xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">DESCRIPCION CIELO</h5>
@@ -346,7 +437,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-solid fa-droplet  fa-2xl"></i></h1>
+                  <h1><i class="fa-solid fa-droplet  fa-2xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">PRECIPITACIONES</h5>
@@ -363,7 +454,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-solid fa-wind  fa-2xl"></i></h1>
+                  <h1><i class="fa-solid fa-wind  fa-2xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">VIENTOS</h5>
@@ -377,7 +468,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-solid fa-temperature-arrow-up  fa-2xl"></i></h1>
+                  <h1><i class="fa-solid fa-temperature-arrow-up  fa-2xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">TEMPERATURA MAXIMA</h5>
@@ -391,7 +482,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <div class="col s12 m4">
                 <div class="icon-block">
                   <br>
-                  <h1><i class="fa-solid fa-temperature-arrow-down  fa-2xl"></i></h1>
+                  <h1><i class="fa-solid fa-temperature-arrow-down  fa-2xl animated-icon"></i></h1>
                   <br>
                   <br>
                   <h5 class="center">TEMPERATURA MINIMA</h5>
@@ -418,29 +509,29 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
         </div>
       </div>
   
+
+
+
       <div class="container center">
-        <div class="section center">
-          <div class="row center">
-  
-            <div class="col s4">
-              <div class="card hoverable">
-                <div class="card-content tooltipped" data-position="bottom" data-tooltip="Elige que deseas comparar de hoy y los 3 posteriores dias.">
-                  <form>
-                    <label for='sug'>Parametro a Comparar:</label>
-                    <input list='leo' id='pam' name=''>
-                    <datalist id='leo'>
-                      <option>Probabilidad de Precipitación</option>
-                      <option>Velocidad de Viento</option>
-                      <option>Temperatura Minima</option>
-                      <option>Temperatura Maxima</option>
-                    </datalist>
-                  </form>
-  
+        <div class="col s12 m7">
+            <div class="row" id="filrt">
+              <div class="col s12 m4">
+                <div class="card hoverable">
+                  <div class="card-content tooltipped" data-position="bottom" data-tooltip="Aqui puedes elegir cualquier estado, solo da click sobre el icono y se desplegara un listado, solo da click sobre el que sea de tu interes.">
+                    <form>
+                      <label for='sug'>Parametro a Comparar:</label>
+                      <input list='leo' id='pam' name=''>
+                      <datalist id='leo'>
+                        <option>Probabilidad de Precipitación</option>
+                        <option>Velocidad de Viento</option>
+                        <option>Temperatura Minima</option>
+                        <option>Temperatura Maxima</option>
+                      </datalist>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-  
-          </div>
         </div>
       </div>
   
@@ -465,7 +556,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
       <br>
   
     </div>
-  </div>
+
 
 
 
@@ -503,20 +594,25 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
                 <div class="card-content white-text">
                   <span class="card-title">Clima de los Municipios</span>
 
-                  <div class="container">
-                    <div class="section" id="listN">
-                      <ul class="pagination center tooltipped" data-position="bottom" data-tooltip="Este es un listado general de todos los municipios, puedes escoger cualquier numero de la lista o ir a los siguientes 5 listados.">
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="ant"><i class="material-icons">chevron_left</i></button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="primero">1</button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="segundo">2</button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="tercero">3</button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="cuarto">4</button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="quinto">5</button></li>
-                        <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="sig"><i class="material-icons">chevron_right</i></button></li>
-                      </ul>
+
+
+
+                  <div class="scroll-horizontal">
+
+                    <div class="container">
+                      <div class="section" id="listN">
+                        <ul class="pagination center tooltipped" data-position="bottom" data-tooltip="Este es un listado general de todos los municipios, puedes escoger cualquier numero de la lista o ir a los siguientes 5 listados.">
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="ant"><i class="material-icons">chevron_left</i></button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="primero">1</button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="segundo">2</button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="tercero">3</button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="cuarto">4</button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="quinto">5</button></li>
+                          <li class="waves-effect"><button class="waves-effect waves-light btn-small orange" id="sig"><i class="material-icons">chevron_right</i></button></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-
 
                   <table class="responsive-table">
                     <thead>
@@ -590,6 +686,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
                     </tfoot>
 
                   </table>
+
                 </div>
               </div>
             </div>
@@ -621,9 +718,9 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
   
 
   <div class="container">
-    <div class="carousel carousel-slider center">
+    <div class="carousel carousel-slider center" id="mapeo">
 
-      <div class="carousel-item red white-text" id="mapeo">
+      <div class="carousel-item red white-text">
         <div class="card-content white-text">
           <h4>Clima Árido y Semidesértico</h4>
           <br>
@@ -788,7 +885,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
       <div class="row">
   
         <div class="col l3 s12">
-          <h5 class="white-text">CLIMA<span class="yellow-text text-accent-4"> MX</span></h5>
+          <h5 class="white-text">METEO<span class="yellow-text text-accent-4"> MEX</span></h5>
           <p>
             Díaz Hernández Emilio <br>
             González Manzano Leonardo <br>
@@ -813,7 +910,7 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
               <input id="email" type="email" class="validate" name="email">
               <label for="email">Correo electrónico</label>
             </div>
-            <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">Suscribirme
+            <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action" id="susc">Suscribirme
               <i class="material-icons right">send</i>
             </button>
           </form>
@@ -866,6 +963,8 @@ height: auto; /* Mantiene la proporción de aspecto de la imagen */
     </div>
   </footer>
 -->
+<!-- Aquí irá tu mapa -->
+
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

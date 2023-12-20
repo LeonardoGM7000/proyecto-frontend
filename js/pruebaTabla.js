@@ -378,7 +378,7 @@ function graficasPastel(id,datos,titulo){
 function realizarGraficotMax(){
 
   // Obtén el contexto del canvas
-  var ctx = document.getElementById('miGrafica').getContext('2d');
+  var ctx = document.getElementById('miGrafica');
 
   if (miGrafica) {
       miGrafica.destroy();

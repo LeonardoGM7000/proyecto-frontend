@@ -25,10 +25,6 @@
   .card:hover{
     transform: scale(1.05);
   }
-
-  canvas{
-    margin: 0 auto;
-  }
   
   .chart-container {
     position: relative;
