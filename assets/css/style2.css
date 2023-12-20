@@ -504,10 +504,10 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
+/*section {
   padding: 60px 0;
   overflow: hidden;
-}
+}*/
 
 .section-title {
   padding-bottom: 40px;

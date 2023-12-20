@@ -5,6 +5,7 @@ var miGrafica;
 //var botonN=document.getElementById("botonNav");
 //botonN.addEventListener("click",obtenerB,false); //Realiza la busqueda de la barra de navegacion
 
+
 document.getElementById("abc").addEventListener("click",function(){
     introJs().setOptions({
         steps: [
@@ -52,13 +53,9 @@ document.getElementById("abc").addEventListener("click",function(){
             intro: 'En este partado, encontraras los climas que existen en México, ademas de ver como se conforman las regiones y zonas.',
           },
           {
-            element: '#infoC', 
-            intro: 'Aqui encontraras información de los diversos climas, como en donde estan presentes y sus caracteristicas.',
-          },
-          /*{
-            element: '#inf3', 
+            element: '#inf', 
             intro: 'En cada apartado encontraras un boton como estos, puedes dar click sobre estos para ver una descripción de su funcionamiento.',
-          },*/
+          },
           {
             intro: 'Y has terminado contiene un pequeño boton naranja del cual te puedes apoyar con sus indicaciones ¡NOS VEMOS PRONTO!',
           },
@@ -142,6 +139,8 @@ document.getElementById("inf5").addEventListener("click",function(){
 });
 
 document.getElementById("comparar").addEventListener("click",function(){
+
+   
 
     if(selectorParametro.value=="Probabilidad de Precipitación"){
         realizarGraficopP();

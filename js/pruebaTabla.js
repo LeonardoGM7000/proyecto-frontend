@@ -139,7 +139,7 @@ $(document).ready(() => {
       },
     },
     pagingType: "full_numbers",
-    "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],
+    "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
     "info": false,
   });
 
@@ -305,6 +305,42 @@ $(document).ready(() => {
   graficasPastel('pastelDia4',dia4, dias[3]);
 
   cargado = true;
+
+
+  var mediaqueryList = window.matchMedia("(max-width: 768px)");
+  mediaqueryList.addListener( function(EventoMediaQueryList) {
+    var ctx1 = document.getElementById('pastelDia1');
+    var ctx2 = document.getElementById('pastelDia2');
+    var ctx3 = document.getElementById('pastelDia3');
+    var ctx4 = document.getElementById('pastelDia4');
+    
+    if(EventoMediaQueryList.matches) {
+      // Realizamos las acciones cuando cambia el estado de la mediaquery y ahora cumple su valor
+      ctx1.parentNode.style.height = '50vh';
+      ctx1.parentNode.style.width = '50vw';
+      
+      ctx2.parentNode.style.height = '50vh';
+      ctx2.parentNode.style.width = '50vw';
+
+      ctx3.parentNode.style.height = '50vh';
+      ctx3.parentNode.style.width = '50vw';
+
+      ctx4.parentNode.style.height = '50vh';
+      ctx4.parentNode.style.width = '50vw';
+    } else {
+      ctx1.parentNode.style.height = '60vh';
+      ctx1.parentNode.style.width = '30vw';
+
+      ctx2.parentNode.style.height = '60vh';
+      ctx2.parentNode.style.width = '30vw';
+      
+      ctx3.parentNode.style.height = '60vh';
+      ctx3.parentNode.style.width = '30vw';
+      
+      ctx4.parentNode.style.height = '60vh';
+      ctx4.parentNode.style.width = '30vw';
+    }
+  });
 });
 
 function graficasPastel(id,datos,titulo){
@@ -333,9 +369,10 @@ function graficasPastel(id,datos,titulo){
                 size: 20
               }
           }
-      }
+      },
+      maintainAspectRatio: false,
     }
-  });
+  });  
 }
 
 function realizarGraficotMax(){
